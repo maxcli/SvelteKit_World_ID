@@ -1,31 +1,37 @@
 <script>
 import { IDKitWidget } from '@worldcoin/idkit'  
+import { signIn ,signOut} from '@auth/sveltekit/client';
+import { page } from "$app/stores"
 import { browser } from '$app/environment'
-let loginButton='Login'
+ 
 
-async function walletlogin() {
-    console.log('*** wallet login2')
-    if (browser) {
-     
-        console.log('*** wallet login2')
-      
-
-
-          
-
-    }
-}
+ 
 
 </script>
 
 
 
 <div class="flex space-x-8">
- <button  class="btn"
-   on:click={async () => {   walletlogin() 
+  {#if $page.data.session}
 
-   }}>{loginButton}</button
- >
+    <span class="signedInText">
+      <small>Signed in as</small><br />
+      <strong>{$page.data.session.user?.name ?? "User"}</strong>
+    </span>
+    <button on:click={() => signOut()} class="button">Sign out</button>
+  {:else}
+    <button class="btn"  on:click={() => signIn(
+    'auth0', {
+    redirect: false,
+    callbackUrl: 'http://localhost:4000'
+    },
+    {
+      scope: 'api openid profile email'
+    }
+    )}>Sign In with Auth0</button>
+  {/if}
+
+
 </div>
 
 <style>
