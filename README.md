@@ -8,6 +8,8 @@ Use svelte names : https://kit.svelte.dev/docs/load
 Auth.js provider type : OAuth
 https://authjs.dev/guides/providers/custom-provider
 
+
+check  https://warnings.authjs.dev#debug-enabled
  
  
 Assume :
