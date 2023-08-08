@@ -14,11 +14,18 @@ import { browser } from '$app/environment'
 <div class="flex space-x-8">
   {#if $page.data.session}
 
+    {#if $page.data.session.user?.image}
+    
+      <span
+      style="background-image: url('{$page.data.session.user.image}')"
+      class="avatar"
+      />
+    {/if}
     <span class="signedInText">
       <small>Signed in as</small><br />
       <strong>{$page.data.session.user?.name ?? "User"}</strong>
     </span>
-    <button on:click={() => signOut()} class="button">Sign out</button>
+    <button on:click={() => signOut()} class="btn">Sign out</button>
   {:else}
     <button class="btn"  on:click={() => signIn(
     'auth0', {
