@@ -1,7 +1,5 @@
 <script>
 
- import { version } from '$app/environment'
-
  export let data
  const {session}=data
 

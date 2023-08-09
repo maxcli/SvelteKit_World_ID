@@ -1,5 +1,5 @@
 <script>
-   export const appName ='SvelteKit & World ID'   
+   export const appName ='SvelteKit &  OAUTH0'   
 </script>
 <header>
 <nav>
@@ -7,10 +7,13 @@
     <li>
         <a href="/">Home</a>
     </li>
-
     <li>
-        <a href="/about">About</a>
+        <a href="/auth">Auth</a>
     </li>
+    <li>
+        <a href="/protected">Protected</a>
+    </li>
+ 
 </ul>
 </nav>
 <h1>{appName}</h1>  

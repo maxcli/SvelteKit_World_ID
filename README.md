@@ -8,6 +8,8 @@ change this before prod :
 https://warnings.authjs.dev#debug-enabled
  
  
+Later : Change from Oauth client id to World ID
+
 AUTH0 Configuration  :
 
 allowed callback URL
