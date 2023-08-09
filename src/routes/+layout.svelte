@@ -7,12 +7,7 @@
     <li>
         <a href="/">Home</a>
     </li>
-    <li>
-        <a id="itemanchor"  class=  "disable-click"  href="/aritems" data-sveltekit-preload-data="hover">AR Items</a>
-    </li>
-    <li>
-        <a  id="addanchor"  class=  "disable-click"  href="/add" >Add</a>
-    </li>
+
     <li>
         <a href="/about">About</a>
     </li>
@@ -28,9 +23,7 @@
 
 <style>
 
-.disable-click{
-          pointer-events:none;
-      }
+
       
 nav{
     display: flex;
